@@ -25,6 +25,7 @@ a {
 
 .margin {
     margin: 7px;
+    background-color: gray;
     border-style: solid;
     border-radius: 10px;
     border-color: white;
