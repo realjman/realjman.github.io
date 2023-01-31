@@ -8,17 +8,34 @@
     <link rel='stylesheet' href='style.css'>
     <link rel="icon" href="favicon.png">
 
+    <script src="tabs.js"></script>
+
     <title>J man's Github Page</title>
 </head>
 <body>
     <p class="title">J man's Site</p>
-    <div class="margin">
-        <p class="title">Main</p>
-        <a class="button" href="https://www.youtube.com/channel/UC2iU2m1IJnPbA49jf2j1p6A">Youtube</a><br><br>
-        <a class="button" href="https://www.roblox.com/users/195013063/profile">Roblox Profile</a>
-        <a class="button" href="https://www.discord.gg/UUyR82mzMG">Discord Server (You need a roblox account to verify.)</a><br><br>
-        <a class="button" href="https://realjman.github.io/riceball-incremental/">riceball incremental (no saves)</a>
-        <a class="button" href="aboutme.html">About Me</a>
+    <div class="sections">
+        <button class="tablinks" onclick="openTab(event, 'Main')" id="defaultOpen">Main</button>
+        <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'AboutMe')">About Me</button>
+        <div class="tabcontent" id="Main">
+            <a class="button" href="https://www.youtube.com/channel/UC2iU2m1IJnPbA49jf2j1p6A">Youtube</a><br><br>
+            <a class="button" href="https://www.roblox.com/users/195013063/profile">Roblox Profile</a>
+            <a class="button" href="https://www.discord.gg/UUyR82mzMG">Discord Server (You need a roblox account to verify.)</a><br><br>
+        </div>
+        <div class="tabcontent" id="Projects">
+            <a class="button" href="https://realjman.github.io/riceball-incremental">Riceball Incremental (does not save)</a>
+            <a class="button" href="https://realjman.github.io/jmans-first-incremental">My first incremental (really bad)</a>
+        </div>
+        <div class="tabcontent" id="AboutMe">
+            <p class="info">14, beginner developer, knows a bit of html, css, js and python</p><br>
+            <p><a class="button" href="https://www.discord.gg/lethalgames">Lethal Games Server Moderator</a> | <a class="button" href="https://www.roblox.com/games/9292879820/">Grass Cutting Incremental Tester</a></p>
+            <p>Discord: j man#5952</p>
+        </div>
     </div>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>
