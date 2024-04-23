@@ -67,6 +67,7 @@ body {
     margin: auto;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 10px;
     font-size: 25px;
     padding: 0 1rem;
 }
@@ -82,7 +83,8 @@ body {
 
 .info {
     margin: auto;
-    width: fit-content;
+    width: 60rem;
+    height: 3rem;
     border-radius: 7px;
     background-color: #94C773;;
     font-size: 30px;
@@ -93,6 +95,16 @@ body {
     padding: 6px 12px;
     animation: fadeEffect 1s;
   }
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    background-color: #49983c;
+    border: 3px solid;
+    border-radius: 1rem;
+    margin: auto;
+}
 
 @keyframes fadeEffect {
     from { opacity: 0;}
