@@ -1,117 +1,154 @@
 * {
-    text-align: center;
-    font-family: Roboto-medium;
-    font-weight: normal;
-    user-select: none;
-}
-
-html {
-    scroll-behavior: smooth;
+  user-select: none;
+  font-family: Roboto-Medium;
 }
 
 body {
-    background-color: #AAD8A3;
-    color:#064207
+  background-color: #bfb;
+  display: flex;
 }
 
-.title {
-    font-family: Roboto-medium;
-    font-size: 30px;
-    border: 8px;
-    background-color: #95CB8D;
-    border-radius: 7px;
-    margin: auto;
-    width: 200px;
-    margin-bottom: 10px;
+div {
+  flex-direction: row;
 }
 
-.sections {
-    margin: auto;
-    margin-top: 10px;
-    background-color: #95DA8B;
-    border-radius: 7px;
-    width: fit-content;
-    padding-top: 1rem;
+.sidetabs {
+  background-color: #448844;
+  height: fit-content;
+  width: fit-content;
+  border: 0.2rem solid #559955;
+  border-radius: 5px;
+  flex-direction: column;
+
 }
 
-.tablinks {
-    font-family: Roboto-medium;
-    font-size: 30px;
-    border: 8px;
-    background-color: #95CB8D;
-    border-radius: 7px;
-    margin: auto;
-    width: 200px;
-    margin-bottom: 10px;
+#icon {
+  background-color: #373;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #4d4;
+  width: fit-content;
+  margin: 4px;
 }
 
-.tablinks:hover {
-    transform: scale(1.1);
-    transition-duration: .4s ;
-    color: #ccc
+.border {
+  border: #000 solid 2px;
 }
 
-.tablinks:active {
-    transform: scale(0.9);
-    transition-duration: .4s;
-    background-color: #666;
+.sidebutton {
+  text-align: left;
+  background-color: #050;
+  border-radius: 5px;
+  border: 3px solid rgb(120, 175, 120);
+  font-size: 1.5rem;
+  color: #4d4;
+  width: auto;
+  margin: auto;
+
+  transform: translate(0rem);
+  transition: ease-in-out;
+  transition-duration: .6s;
 }
 
-.button {
-    border: 5px;
-    border-radius: 7px;
-    background-color: #94C773;
-    text-decoration: none;
-    color: #064207;
-    width: fit-content;
-    margin: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 10px;
-    font-size: 25px;
-    padding: 0 1rem;
+.sidebutton:hover {
+  background-color: #595;
+
+  transition: ease-in-out;
+  transition-duration: .6s;
 }
 
-.button:hover {
-    background-color: #96ce63;
-    transform: scale(1.2);
-    transition: ease-in-out;
-    transition-duration: .65s;
-    color:#87ae76
+.sidebutton:active {
+  background-color: #797;
+  transform: scale(0.9);
+  transition: ease-in-out;
+  transition-duration: .1s;
 }
 
+div[class = 'sidebutton active'] {
+  text-align: center;
+  background-color: #7f7;
+  color: #262;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 10rem;
+  margin: auto;
 
-.info {
-    margin: auto;
-    width: 60rem;
-    height: 3rem;
-    border-radius: 7px;
-    background-color: #94C773;;
-    font-size: 30px;
+  transition: ease-in-out;
+  transition-duration: .6s;
 }
 
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    animation: fadeEffect 1s;
-  }
+div[class = 'sidebutton active']:hover {
+  text-align: center;
+  background-color: #6d6;
+  color: #262;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 10rem;
+  margin: auto;
 
-.section {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    background-color: #49983c;
-    border: 3px solid;
-    border-radius: 1rem;
-    margin: auto;
+  transform: translate(0rem);
+  transition: ease-in-out;
+  transition-duration: .6s;
 }
 
-@keyframes fadeEffect {
-    from { opacity: 0;}
-    to { opacity: 1;}
+.contents {
+  background-color: #484;
+  width: 70rem;
+  border: 3px solid #000;
+  border-radius: 5px;
+  margin: 1rem;
+
+  font-size: 1.5rem;
+  color: #4d4;
+
+  animation: transition1 2s;
+}
+
+.content {
+  margin: 1rem;
+  flex-direction: column;
+
+  background-color: #484;
+  width: 68rem;
+  border: 3px solid #000;
+  border-radius: 5px;
+
+  font-size: 1.5rem;
+  color: #4d4;
+
+  animation: transition1 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a {
+  background-color: #050;
+  border-radius: 5px;
+  border: 3px solid rgb(120, 175, 120);
+  font-size: 1.5rem;
+  color: #4d4;
+  margin: .3rem;
+  text-decoration-line: none;
+}
+
+a:hover {
+  background-color: #595;
+
+  transition: ease-in-out;
+  transition-duration: .6s;
+}
+
+a:active {
+  background-color: #797;
+  transform: scale(0.9);
+  transition: ease-in-out;
+  transition-duration: .1s;
 }
 
 @font-face {
-    font-family: Roboto-Medium;
-    src: url(roboto-medium-webfont.woff);
+  font-family: Roboto-Medium;
+  src: url(roboto-medium-webfont.woff);
+}
+
+@keyframes transition1 {
+  from {transform: translate(100rem);}
+  to {transform: translate(0rem)}
 }

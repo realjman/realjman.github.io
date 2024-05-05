@@ -18,3 +18,20 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
+
+function selectTab(tab, name) {
+  var i, tabs, buttons
+
+  tabs = document.getElementsByClassName('content');
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = 'none';
+  }
+
+  buttons = document.getElementsByClassName('sidebutton')
+  for (i = 0; i < buttons.length; i++) {
+    buttons[i].className = buttons[i].className.replace(" active", "");
+  }
+
+  document.getElementById(name).style.display = 'flex';
+  tab.currentTarget.className += " active";
+}
