@@ -24,7 +24,7 @@ function selectTab(tab, name) {
 
   tabs = document.getElementsByClassName('content');
   for (i = 0; i < tabs.length; i++) {
-    tabs[i].style.display = 'none';
+    tabs[i].style.display = 'none'
   }
 
   buttons = document.getElementsByClassName('sidebutton')

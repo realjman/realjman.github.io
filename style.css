@@ -127,19 +127,20 @@ a {
   color: #4d4;
   margin: .3rem;
   text-decoration-line: none;
+
+  transition-duration: .2s;
 }
 
 a:hover {
   background-color: #595;
 
-  transition: ease-in-out;
   transition-duration: .6s;
 }
 
 a:active {
   background-color: #797;
+  
   transform: scale(0.9);
-  transition: ease-in-out;
   transition-duration: .1s;
 }
 
@@ -151,4 +152,9 @@ a:active {
 @keyframes transition1 {
   from {transform: translate(100rem);}
   to {transform: translate(0rem)}
+}
+
+@keyframes transition2 {
+  from {transform: translate(0rem);}
+  tp {transform: translate(100rem);}
 }
