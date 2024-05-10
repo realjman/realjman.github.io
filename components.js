@@ -35,3 +35,24 @@ function selectTab(tab, name) {
   document.getElementById(name).style.display = 'flex';
   tab.currentTarget.className += " active";
 }
+
+function getaf(x) { return x < 10 ? "0"+x : x }
+function isPM(x) { return x > 11 ? true : false }
+
+function update() {
+  let uH12
+
+  let d = new Date()
+
+  let tzOffsetHours = (d.getTimezoneOffset()/60)
+  let [uH,uM,uS] = [d.getUTCHours()-tzOffsetHours,d.getMinutes(),d.getSeconds()]
+
+  ispm = isPM(uH)
+  {ispm ? (uH12 = uH - 12) : uH12 = uH}
+  {ispm ? (pm = 'PM') : pm = 'AM'}
+
+  $("#time").html("It's currently "+getaf(uH)+":"+getaf(uM)+":"+getaf(uS)+" / "+getaf(uH12)+":"+getaf(uM)+":"+getaf(uS)+" "+pm+" for me.")
+  $("#test").html(tzOffsetHours)
+}
+
+setInterval(update, 1000/60)
