@@ -52,6 +52,7 @@ div {
 
 .sidebutton:hover {
   background-color: #595;
+  flex-grow: 3;
 
   transition: ease-in-out;
   transition-duration: .6s;
@@ -85,6 +86,7 @@ div[class = 'sidebutton active']:hover {
   font-size: 1.5rem;
   width: 10rem;
   margin: auto;
+  flex-grow: 3;
 
   transform: translate(0rem);
   transition: ease-in-out;
@@ -105,6 +107,7 @@ div[class = 'sidebutton active']:hover {
 }
 
 .content {
+  text-align: center;
   margin: 1rem;
   flex-direction: column;
 
@@ -120,6 +123,7 @@ div[class = 'sidebutton active']:hover {
 }
 
 a {
+  text-align: center;
   background-color: #050;
   border-radius: 5px;
   border: 3px solid rgb(120, 175, 120);
@@ -156,5 +160,5 @@ a:active {
 
 @keyframes transition2 {
   from {transform: translate(0rem);}
-  tp {transform: translate(100rem);}
+  to {transform: translate(100rem);}
 }
