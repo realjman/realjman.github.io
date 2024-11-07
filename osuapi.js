@@ -3,7 +3,7 @@ const url = new URL(
 );
 
 const params = {
-    "key": "mollitia",
+    "key": "realjman",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -14,6 +14,10 @@ const headers = {
 };
 
 fetch(url, {
+    mode: 'no-cors',
+    credentials: 'include',
     method: "GET",
     headers,
-}).then(response => response.json());
+})  .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log('Failed: ' + error.message));
