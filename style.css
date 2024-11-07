@@ -130,8 +130,6 @@ div[class = 'sidebutton active']:hover {
 
   font-size: 1.5rem;
   color: #4d4;
-
-  animation: transition1 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 a {
@@ -163,14 +161,4 @@ a:active {
 @font-face {
   font-family: Roboto-Medium;
   src: url(roboto-medium-webfont.woff);
-}
-
-@keyframes transition1 {
-  from {transform: translate(10rem);}
-  to {transform: translate(0rem)}
-}
-
-@keyframes transition2 {
-  from {transform: translate(0rem);}
-  to {transform: translate(10rem);}
 }
