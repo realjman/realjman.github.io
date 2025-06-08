@@ -6,51 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel='stylesheet' href='style.css'>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="assets/img/favicon.png">
 
-    <script src="components.js"></script>
+    <script src="js/Element.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/loop.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/shaders.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <title>J man's Github Page</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://realjman.github.io/"/>
+    <meta property="og:title" content="realjman.github.io"/>
+    <meta property="og:description" content="Powered by Silver Wolf!"/>
+
+    <title>realjman.github.io</title>
 </head>
-<body>
-    <div class="sidetabs">
-      <div class="sidetab" id="icon">realjman.github.io</div>
-      <div class="border"></div>
-      <div class="sidebutton" id='default' onclick="selectTab(event, 'aboutme')">About Me</div>
-      <div class="sidebutton" onclick="selectTab(event, 'games')">Games</div>
-      <div class="sidebutton" onclick="selectTab(event, 'socials')">Socials</div>
-    </div>
-    <div class="contents">
-      <div class="content" id="aboutme">
-         - Age: 16 (08/08/2008)<br>
-         - Pronouns: any (preferably he/him)<br>
-         - Programming Languages I script with: HTML, CSS, Javascript, Python, Lua<br>
-         - Games I (mostly) play: Minecraft, Roblox, osu!<br>
-         - Timezone: UTC/GMT+8<br>
-         <div class="border"></div>
-        <div id="time"></div>
-        <div class="border"></div><br>
-        <span class="h">I am also a: </span>
-        <a class="button" href="https://www.discord.gg/lethalgames">Lethal Games Discord Server Administrator</a>
-        <a class="button" href="https://www.roblox.com/games/9292879820/">Grass Cutting Incremental / Lethal Games Tester</a>
-      </div>
-      <div class="content" id="games">
-        <span class="h">Games I mod:</span>
-        <a class="button" href="https://realjman.github.io/The-J-Tree-Replanted">The J Tree: Replanted</a>
-        <a class="button" href="https://realjman.github.io/ADfasterer">Antimatter Dimensions: Fasterer</a>
-      </div>
-      <div class="content" id="socials">
-        <a>Discord: @rjman</a>
-        <a class="button" href="https://www.discord.gg/UUyR82mzMG">Discord Server (You need a roblox account to verify.)</a>
-        <a class="button" href="https://galaxy.click/user/104">Find me on galaxy.click</a>
-        <a class="button" href="https://www.youtube.com/channel/UC2iU2m1IJnPbA49jf2j1p6A">Youtube</a>
-        <a class="button" href="https://osu.ppy.sh/users/35496547">osu! profile</a>
+<body onload="loadApp()">   
+  <div class="app">
+    <canvas id="canvasTest"></canvas>
+    <div class="block-outside">
+      <a onclick="window.open('https://wiki.hoyolab.com/pc/hsr/entry/710')"><img src="assets/img/sw.png" id="sw"></a>
+      <div class="block">
+        <div class="title">realjman.github.io</div>
+        <div class="tabs">
+          <div class="buttons" id="tabs"></div>
+          <div class="content">
+            <div class="tabContent" id="content"></div>
+            <div class="gamesTab" id="games"></div>
+            <div class="addInfoTab" id="addInfo"></div>
+            <div class="extrasTab" id="extras"></div>
+          </div>
+        </div>
+        <div class="time" id="time"></div>
       </div>
     </div>
-    <script>
-      document.getElementById("default").click();
-    </script>
+  </div>
 </body>
 </html>
-
