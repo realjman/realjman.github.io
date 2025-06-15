@@ -52,6 +52,9 @@ const LINKS = {
     },
     "Roblox Profile": {
       linkURL: "https://www.roblox.com/users/195013063/profile"
+    },
+    "GitHub Profile": {
+      linkURL: "https://github.com/realjman"
     }
   },
 }
