@@ -6,7 +6,7 @@ const TABS = {
     content: `
       I am ${colored("realjman", "#51688f")}!<br> I go by many names but mostly "J man".<br>
       <div class='line'></div>
-      I am 16 years old (I will turn 17 in ${calculateDaysTillBirthday()} day(s)).<br>
+      I am 17 years old.<br>
       <div class='line'></div>
       ${colored("Pronouns:", "#394b6e")} any<br>
       <div class='line'></div>
