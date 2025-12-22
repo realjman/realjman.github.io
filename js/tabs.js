@@ -22,7 +22,8 @@ const TABS = {
   2: {
     id: `Additional Information`,
     content: `
-      I held positions in ${colored("Lethal Games", "#3062b3")} as an ${colored("Administrator", "#85518f")} and a ${colored("Game Tester", "#a1479e")}.
+      I held positions in ${colored("Lethal Games", "#3062b3")} as an ${colored("Administrator", "#85518f")} and a ${colored("Game Tester", "#a1479e")}.<br>
+      Part of the galaxy.click Oversight team.
     `,
   },
   3: {
@@ -49,6 +50,9 @@ const LINKS = {
     },
     "osu! Profile": {
       linkURL: "https://osu.ppy.sh/users/35496547"
+    },
+    "My osu! History Spreadsheet": {
+      linkURL: "https://docs.google.com/spreadsheets/d/1cPdi8jKhLjs2wOxiNPjVsgiCGG15gIbZ1-uwGGdOYOM/edit?gid=0#gid=0"
     },
     "Roblox Profile": {
       linkURL: "https://www.roblox.com/users/195013063/profile"
